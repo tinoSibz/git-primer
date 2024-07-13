@@ -3,7 +3,7 @@ marp: true
 theme: eai
 paginate: true
 header: 'Introduction to Git and Version Control Outline'
-footer: '![width:200px](../assets/img/eai-logo.png)'
+footer: '![width:200px](../assets/img/logo.png)'
 class: invert
 ---
 

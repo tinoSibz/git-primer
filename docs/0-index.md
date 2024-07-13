@@ -2,7 +2,7 @@
 marp: true
 theme: eai
 paginate: true
-footer: '![width:200px](assets/img/eai-logo.png)'
+footer: '![width:200px](assets/img/logo.png)'
 class: invert
 ---
 
