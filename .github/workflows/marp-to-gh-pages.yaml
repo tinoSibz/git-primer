@@ -32,13 +32,16 @@ jobs:
       - name: Copy README
         run: cp README.md build/README.md
 
-      - name: Check if docs folder exists
-        id: docs-folder-exists
-        run: bash -c "[[ -d docs ]] ; echo \"has_docs=\$?\" >> \"$GITHUB_OUTPUT\""
 
-      - name: Marp Build (docs folder, if exists)
-        if: steps.docs-folder-exists.outputs.has_docs == '0'
-        uses: docker://marpteam/marp-cli:latest
+      - name: Marp Build (index)
+        uses: docker://marpteam/marp-cli:v2.3.0
+        with:
+          args: --html --allow-local-files --theme theme.css docs/0-index.md -o build/index.html
+        env:
+          MARP_USER: root:root
+
+      - name: Marp Build (docs folder)
+        uses: docker://marpteam/marp-cli:v2.3.0
         with:
           args: --html --allow-local-files --theme theme.css -I docs/ -o build/docs
         env:
