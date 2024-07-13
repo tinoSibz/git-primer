@@ -2,7 +2,6 @@
 marp: true
 theme: custom
 paginate: true
-footer: '![width:200px](./img/logo.png)'
 class: invert
 ---
 
