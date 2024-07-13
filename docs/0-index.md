@@ -8,7 +8,9 @@ class: invert
 
 # Internship Git Primer
 
-Introductory level workshop focusing on Git fundamentals.
+> Introductory level workshop focusing on Git fundamentals.
+
+- Presented as a three day workshop.
 
 ---
 
