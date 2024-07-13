@@ -24,29 +24,29 @@ jobs:
       - name: Ensure build dir exists
         run: mkdir -p build
 
-      - name: Copy images directory (if exists)
-        run: if [[ -d img ]]; then cp -R img build/img; fi
+      - name: Copy assets directory (if exists)
+        run: if [[ -d assets ]]; then cp -R img build/assets; fi
 
-      - name: Marp Build (README)
-        uses: docker://marpteam/marp-cli:v3.0.2
-        with:
-          args: README.md -o build/index.html
-        env:
-          MARP_USER: root:root
+      # - name: Marp Build (README)
+      #   uses: docker://marpteam/marp-cli:v3.0.2
+      #   with:
+      #     args: README.md -o build/index.html
+      #   env:
+      #     MARP_USER: root:root
 
-      - name: Marp Build (README.pdf)
-        uses: docker://marpteam/marp-cli:v3.0.2
-        with:
-          args: README.md --allow-local-files -o build/README.pdf
-        env:
-          MARP_USER: root:root
+      # - name: Marp Build (README.pdf)
+      #   uses: docker://marpteam/marp-cli:v3.0.2
+      #   with:
+      #     args: README.md --allow-local-files -o build/README.pdf
+      #   env:
+      #     MARP_USER: root:root
 
-      - name: Marp Build (README.pptx)
-        uses: docker://marpteam/marp-cli:v3.0.2
-        with:
-          args: README.md --allow-local-files -o build/README.pptx
-        env:
-          MARP_USER: root:root
+      # - name: Marp Build (README.pptx)
+      #   uses: docker://marpteam/marp-cli:v3.0.2
+      #   with:
+      #     args: README.md --allow-local-files -o build/README.pptx
+      #   env:
+      #     MARP_USER: root:root
 
       - name: Check if docs folder exists
         id: docs-folder-exists
