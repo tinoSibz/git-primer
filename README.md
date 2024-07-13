@@ -5,7 +5,8 @@
 **Rendered Slides:** [https://tinosibz.github.io/git-primer/](https://tinosibz.github.io/git-primer/)
 
 ---
- ## Purpose
+
+## Purpose
 
 - Git allows multiple people to work on the same project and track changes effectively, avoiding conflicts and preserving the history of changes. It also facilitates code review and collaboration, which can lead to better quality and maintainable code.
 
