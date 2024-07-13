@@ -27,12 +27,12 @@ jobs:
       - name: Copy assets directory (if exists)
         run: if [[ -d assets ]]; then cp -R assets build/assets; fi
 
-      # - name: Marp Build (README)
-      #   uses: docker://marpteam/marp-cli:v3.0.2
-      #   with:
-      #     args: README.md -o build/index.html
-      #   env:
-      #     MARP_USER: root:root
+      - name: Marp Build (README)
+        uses: docker://marpteam/marp-cli:v3.0.2
+        with:
+          args: README.md -o build/index.html
+        env:
+          MARP_USER: root:root
 
       # - name: Marp Build (README.pdf)
       #   uses: docker://marpteam/marp-cli:v3.0.2
