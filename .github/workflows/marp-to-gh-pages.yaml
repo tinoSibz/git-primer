@@ -25,7 +25,7 @@ jobs:
         run: mkdir -p build
 
       - name: Copy assets directory (if exists)
-        run: if [[ -d assets ]]; then cp -R img build/assets; fi
+        run: if [[ -d assets ]]; then cp -R assets build/assets; fi
 
       # - name: Marp Build (README)
       #   uses: docker://marpteam/marp-cli:v3.0.2
