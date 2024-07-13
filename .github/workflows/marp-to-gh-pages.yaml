@@ -14,19 +14,20 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
+    permissions: write-all
     steps:
 
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Ensure build dir exists
         run: mkdir -p build
 
-      - name: Copy assets directory (if exists)
-        run: if [[ -d assets ]]; then cp -R assets build/assets; fi
+      - name: Copy assets dir
+        run: cp -R assets build/assets
+
+      - name: Copy theme
+        run:  cp theme.css build/theme.css
 
       - name: Copy README
         run: cp README.md build/README.md
@@ -37,9 +38,9 @@ jobs:
 
       - name: Marp Build (docs folder, if exists)
         if: steps.docs-folder-exists.outputs.has_docs == '0'
-        uses: docker://marpteam/marp-cli:v3.4.0
+        uses: docker://marpteam/marp-cli:latest
         with:
-          args: -I docs/ -o build/docs/
+          args: --html --allow-local-files --theme theme.css -I docs/ -o build/docs
         env:
           MARP_USER: root:root
 
