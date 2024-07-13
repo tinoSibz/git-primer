@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: eai
+theme: custom
 paginate: true
 footer: '![width:200px](assets/img/logo.png)'
 class: invert
@@ -9,8 +9,6 @@ class: invert
 # Internship Git Primer
 
 > Introductory level workshop focusing on Git fundamentals.
-
-- Presented as a three day workshop.
 
 ---
 

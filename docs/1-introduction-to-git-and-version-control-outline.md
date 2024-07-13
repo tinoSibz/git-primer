@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: eai
+theme: custom
 paginate: true
 header: 'Introduction to Git and Version Control Outline'
 footer: '![width:200px](../assets/img/logo.png)'
