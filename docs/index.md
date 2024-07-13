@@ -6,7 +6,7 @@ footer: '![width:200px](assets/img/logo.png)'
 class: invert
 ---
 
-# Internship Git Primer
+# Git Primer
 
 > Introductory level workshop focusing on Git fundamentals.
 
