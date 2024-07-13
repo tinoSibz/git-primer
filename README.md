@@ -1,2 +1,3 @@
 # git-primer
-Introductory level workshop focusing on Git fundamentals.
+
+> Introductory level workshop focusing on Git fundamentals.
