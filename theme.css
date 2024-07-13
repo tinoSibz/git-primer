@@ -3,15 +3,15 @@
 @import 'uncover';
 
 section {
-  background-color: #1a2744;
-  color: white;
+  background-color: #2E3440;
+  color: #ECEFF4;
   font-size: 32px;
   padding: 35px;
 }
 
 a:link,
 a:visited {
-  color: #3b82f6;
+  color: #5E81AC;
 }
 
 header,
